@@ -12,64 +12,65 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 </head>
 <body>
-    <div class="min-vh-100 d-flex flex-column">
-        <div class="flex-grow-1 d-flex justify-content-center align-items-center">
-            <div class="py-4 overflow-hidden">
-                <div class="border_wireframe p-0">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center border_radius_8 py-4 px-2">
-                        <div class="d-flex flex-wrap align-items-center gap-2 mt-3 mt-lg-0">
-                            <img src="./assets/image/svg/bag.svg" alt="logo" />
-                            <h2 class="fw_medium text_base text_light_black">Monday Basket</h2>
-                            <span class="fw-normal text_md text_light_black">(4/50)</span>
-                        </div>
-                        <div class="d-flex flex-wrap gap-3 align-items-center mt-3 mt-lg-0">
-                            <div class="header_responsive ">
-                                <div
-                                    class="d-flex flex-column justify-content-center align-items-center py-4 py-sm-0 flex-sm-row gap-2">
-                                    <button style="height: 35px;" type="button"
-                                        class="btn orange_border text_light_orange fw_medium text_xs px-2">
-                                        Upload CSV
-                                        <img class="ms-2 ps-1" src="./assets/image/svg/upload-icon.svg"
-                                            alt="upload-icon" />
+    <div class="min-vh-100 d-flex flex-column justify-content-center ">
+        <div class="d-flex flex-wrap justify-content-between align-items-center border_radius_8 py-3 px-2  border_table">
+                <div class="d-flex flex-wrap align-items-center gap-2 mt-3 mt-lg-0">
+                    <img src="./assets/image/svg/bag.svg" alt="logo" />
+                    <h2 class="fw_medium text_base text_light_black">Monday Basket</h2>
+                    <span class="fw-normal text_md text_light_black">(4/50)</span>
+                </div>
+                <div class="d-flex flex-wrap gap-3 align-items-center mt-3 mt-lg-0">
+                    <div class="header_responsive ">
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center py-4 py-sm-0 flex-sm-row gap-2">
+                            <button style="height: 35px;" type="button"
+                                class="btn orange_border text_light_orange fw_medium text_xs px-2">
+                                Upload CSV
+                                <img class="ms-2 ps-1" src="./assets/image/svg/upload-icon.svg"
+                                    alt="upload-icon" />
+                            </button>
+
+                            <input class="search_input border me-4 rounded-3 fw-normal text_md text_gray"
+                                type="search" class="form-control" placeholder="Search For Contract"
+                                aria-label="Search For Contract" />
+
+                            <div class="btn-group p-1 border_wireframe light_white_bg">
+                                <button id="button1" type="button" class="btn btn-toggle active"
+                                    onclick="toggleButton('button1', 'button2')">
+                                    Basket
+                                </button>
+                                <a href="./graph.html">
+                                    <button id="button2" type="button" class="btn btn-toggle "
+                                        onclick="toggleButton('button2', 'button1')">
+                                        Pay-off Analyzer
                                     </button>
-
-                                    <input class="search_input border me-4 rounded-3 fw-normal text_md text_gray"
-                                        type="search" class="form-control" placeholder="Search For Contract"
-                                        aria-label="Search For Contract" />
-
-                                    <div class="btn-group p-1 border_wireframe light_white_bg">
-                                        <button id="button1" type="button" class="btn btn-toggle active"
-                                            onclick="toggleButton('button1', 'button2')">
-                                            Basket
-                                        </button>
-                                        <a href="./graph.html">
-                                            <button id="button2" type="button" class="btn btn-toggle "
-                                                onclick="toggleButton('button2', 'button1')">
-                                                Pay-off Analyzer
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
-
-                            <div class="d-flex align-items-center gap-2">
-                                <img class="cursor_pointer" src="/assets/image/svg/srink-page.svg" alt="srink-icon" />
-                                <img class="cursor_pointer" src="/assets/image/svg/cross-icon.svg" alt="cross-icon" />
-                            </div>
-                            <div id="menuBar" style="width: 20px;height: 15px; "
-                                class="d-flex flex-column justify-content-between cursor_pointer d-lg-none">
-                                <span id="line1" style="border: 2px solid black;" class="d-flex rounded-3"></span>
-                                <span id="line2" style="border: 2px solid black;" class="d-flex rounded-3"></span>
-                                <span id="line3" style="border: 2px solid black;" class="d-flex rounded-3"></span>
-                            </div>
-                            <img id="menuIcon" :class="cursor_pointer" src="/assets/image/svg/cross-icon.svg" alt="Menu"
-                                class="d-none">
-
                         </div>
                     </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <img class="cursor_pointer" src="/assets/image/svg/srink-page.svg" alt="srink-icon" />
+                        <img class="cursor_pointer" src="/assets/image/svg/cross-icon.svg" alt="cross-icon" />
+                    </div>
+                    <div id="menuBar" style="width: 20px;height: 15px; "
+                        class="d-flex flex-column justify-content-between cursor_pointer d-lg-none">
+                        <span id="line1" style="border: 2px solid black;" class="d-flex rounded-3"></span>
+                        <span id="line2" style="border: 2px solid black;" class="d-flex rounded-3"></span>
+                        <span id="line3" style="border: 2px solid black;" class="d-flex rounded-3"></span>
+                    </div>
+                    <img id="menuIcon" :class="cursor_pointer" src="/assets/image/svg/cross-icon.svg" alt="Menu"
+                        class="d-none">
+
+                </div>
+            </div>
+        <div class="overflow-auto d-flex flex-column justify-content-start align-items-start border">
+            
+            <div>
+
+                <div class="border_wireframe p-0">
                     <!-- -------------table-headings---------- -->
-                    
-                        <div  class="overflow-x-auto ">
+                        <div>
                             <div style="min-width: 1138px; ">
                                 <table id="dataTable" class="table table-striped table-hover table_inner_shadow w-100">
                                     <thead>

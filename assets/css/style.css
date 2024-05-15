@@ -466,7 +466,9 @@ select {
     --bs-table-color-type: var(--bs-table-striped-color);
     --bs-table-bg-type: white;
 }
-
+.table_width{
+    width:1138px !important;
+}
 /* WIREFRAME 2 CSS */
 .green_line {
     border-bottom: 2px solid var(--green);

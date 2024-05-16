@@ -474,6 +474,7 @@ select {
     border-radius: 8px;
     border-bottom: 0 !important;
 }
+
 /* WIREFRAME 2 CSS */
 .green_line {
     border-bottom: 2px solid var(--green);
